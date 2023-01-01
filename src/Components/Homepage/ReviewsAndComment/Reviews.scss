@@ -1,0 +1,174 @@
+.reviews-section {
+  width: 80%;
+  margin-left: 10%;
+  padding: 2rem 4rem;
+  margin-top: 15rem;
+  height: 65rem;
+  border-radius: 5rem;
+  border: 0.5rem solid #000;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 3rem;
+
+  .reviews-box {
+    padding: 2rem 3rem;
+    overflow-y: scroll;
+
+    h1 {
+      font-size: 3rem;
+      font-family: "Montserrat Alternates", sans-serif;
+      text-transform: capitalize;
+    }
+
+    @keyframes reviewentry {
+      0% {
+        transform: translateY(1.5rem);
+      }
+      50% {
+        transform: translateY(-1.8rem);
+      }
+      100% {
+        transform: translateY(0rem);
+      }
+    }
+    .review-user-box {
+      margin-top: 2rem;
+      padding: 2rem 3rem;
+      border-radius: 2rem;
+      background-color: #fff;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      animation-name: reviewentry;
+      animation-duration: 1s;
+      cursor: pointer;
+      .review-user {
+        display: flex;
+        justify-content: space-between;
+        h2 {
+          font-size: 1.9rem;
+          text-transform: capitalize;
+        }
+        .good-bad-icon {
+          font-size: 1.8rem;
+          fill: #ff6380;
+        }
+      }
+
+      .review-text {
+        margin-top: 1.5rem;
+        font-size: 1.7rem;
+      }
+
+      .rating-box {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: flex-start;
+      }
+
+      &:hover {
+        background-color: #000;
+        color: #fff;
+        transform: scale(1.05);
+        transition: all 0.3s ease-in;
+      }
+    }
+    &::-webkit-scrollbar {
+      width: 2.5rem;
+    }
+    &::-webkit-scrollbar-track {
+      border-radius: 1rem;
+      background-color: #000;
+      margin-block: 0.5rem;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: linear-gradient(to bottom, #fff, #ff6380);
+      border-radius: 2rem;
+      border: 0.7rem solid #000;
+    }
+  }
+  .add-review-box {
+    padding: 2rem 3rem;
+    h1 {
+      font-size: 2.8rem;
+      font-family: "Montserrat Alternates", sans-serif;
+      text-transform: capitalize;
+    }
+
+    .form-add-review {
+      .input-box {
+        margin-top: 5rem;
+        textarea {
+          font-size: 1.8rem;
+          padding: 2rem 3rem;
+          background-color: #fff;
+          border-radius: 3rem;
+          height: 20rem;
+          width: 100%;
+          resize: none;
+          border: 3px solid #000;
+          &::placeholder {
+            font-size: 2rem;
+          }
+          &:focus,
+          &:active,
+          &:hover {
+            outline: none;
+            border: 3px solid #ff6380;
+            transform: scale(1.05);
+          }
+        }
+      }
+      .rating-box {
+        margin-top: 2rem;
+        background-color: #000;
+        border-radius: 3rem;
+        text-align: center;
+        padding: 1.5rem 3.5rem;
+        * {
+          font-size: 2rem;
+          margin-right: 0.7rem;
+          cursor: pointer;
+        }
+      }
+      .add-review-btn-box {
+        display: flex;
+        justify-content: center;
+        .add-review-button {
+          margin-top: 3rem;
+          font-size: 2rem;
+          border-radius: 3rem;
+          padding: 1.5rem 3.5rem;
+          background: #ff6380;
+          border: none;
+          color: #fff;
+          cursor: pointer;
+          width: 100%;
+
+          &:hover {
+            background-color: #dc546d;
+            transform: scale(1.05);
+          }
+        }
+      }
+    }
+  }
+}
+
+.setrating-star {
+  fill: gray;
+  font-size: 1.6rem;
+}
+
+.rating-star {
+  font-size: 1.6rem;
+  fill: #ff6380;
+}
+.rate-icon {
+  fill: #fff;
+}
+
+.response {
+  font-size: 3rem;
+  text-align: center;
+  padding: 1rem 2rem;
+  color: #0e9a07;
+}

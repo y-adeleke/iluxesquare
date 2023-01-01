@@ -1,0 +1,62 @@
+.section-QA {
+  margin-top: 5rem;
+  background-color: #000;
+  text-align: center;
+  padding: 4rem;
+  padding-top: 10rem;
+}
+.section-QA .QA-con {
+  background-color: #005458;
+  padding: 4rem;
+  padding-bottom: 7rem;
+  width: 80%;
+  margin-left: 10%;
+  border-radius: 3rem;
+}
+.section-QA .QA-con h1 {
+  font-size: 4rem;
+  word-spacing: 0.5rem;
+  font-family: "Montserrat Alternates", sans-serif;
+  justify-self: start;
+  color: #fff;
+  text-transform: capitalize;
+  padding-bottom: 3rem;
+}
+.section-QA .QA-con .qa-box {
+  margin-top: 2.5rem;
+  width: 70%;
+  margin-left: 15%;
+}
+.section-QA .QA-con .qa-box .question-box {
+  border-radius: 1rem 1rem 0 0;
+  font-size: 2rem;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.section-QA .QA-con .qa-box .question-box p {
+  font-size: 1.8rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.section-QA .QA-con .qa-box .question-box .plus-icon {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.section-QA .QA-con .qa-box .answer-box {
+  margin-top: 0rem;
+  text-align: start;
+  background-color: #dee2e6;
+  color: #000;
+  text-transform: lowercase;
+  border-radius: 0 0 1rem 1rem;
+}
+.section-QA .QA-con .qa-box .answer-box p {
+  padding: 1rem 1.5rem;
+  font-size: 1.8rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}/*# sourceMappingURL=FaqAnswer.css.map */

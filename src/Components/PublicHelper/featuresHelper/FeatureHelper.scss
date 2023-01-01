@@ -1,0 +1,23 @@
+.wrapper {
+  height: max-content;
+  display: flex;
+  border-radius: 2rem;
+  margin-top: -3rem;
+  .img-wrap {
+    width: 20rem;
+    height: 15rem;
+    margin-top: -8rem;
+    img {
+      border-radius: 3rem 0rem;
+      width: 20rem;
+      height: 15rem;
+    }
+  }
+  .text-wrap {
+    padding: 1rem 0rem;
+    h1 {
+      width: max-content;
+      text-transform: uppercase;
+    }
+  }
+}

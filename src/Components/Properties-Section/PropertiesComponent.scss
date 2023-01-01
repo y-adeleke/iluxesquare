@@ -1,0 +1,207 @@
+.properties-page {
+  //padding-bottom: 5rem;
+  font-family: "Montserrat Alternates", sans-serif;
+  .title-box {
+    padding-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background-color: #e9ecef;
+
+    @keyframes textAnimation {
+      0% {
+        background-image: linear-gradient(to right, #fff, #005458, #eb6440);
+      }
+      20% {
+        background-image: linear-gradient(to right, #fff, #005458, #eb6440);
+      }
+      50% {
+        background-image: linear-gradient(to right, #005458, #fff, #eb6440);
+      }
+      100% {
+        background-image: linear-gradient(to right, #005458, #eb6440, #fff);
+      }
+    }
+    h1 {
+      font-size: 10rem;
+      font-family: "Syncopate", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1rem;
+      transform: scale(1.2);
+      animation-name: textAnimation;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+      display: inline-block;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .sub-title {
+      margin-top: 5rem;
+      display: flex;
+      width: 100%;
+      justify-content: space-around;
+      font-family: "Montserrat Alternates", sans-serif;
+      // font-family: "Raleway", sans-serif;
+      font-family: "Syncopate", sans-serif;
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      color: #005458;
+    }
+  }
+
+  .apartmets-box {
+    //height: 100vh;
+    // background-color: yellow;
+    font-family: "Montserrat Alternates", sans-serif;
+    .search-box {
+      background-color: #fff;
+      height: 7rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      border-bottom: 1px solid #cfd1d2;
+      position: relative;
+      .search-icon {
+        font-size: 2rem;
+      }
+      input {
+        height: 7rem;
+        width: 85%;
+        border: none;
+        font-size: 2rem;
+        font-family: "Montserrat Alternates", sans-serif;
+        outline: none;
+        text-transform: capitalize;
+        &::placeholder {
+          text-transform: capitalize;
+          font-size: 2rem;
+          font-family: "Montserrat Alternates", sans-serif;
+        }
+      }
+      button {
+        font-size: 1.8rem;
+        padding: 1rem 2rem;
+        font-family: "Montserrat Alternates", sans-serif;
+        border: none;
+        background-color: #ff6380;
+        border-radius: 1rem;
+        color: #fff;
+        cursor: pointer;
+        &:active,
+        &:focus,
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    .auto-complete {
+      position: absolute;
+      width: 85%;
+      margin-left: 5%;
+      height: 2rem;
+      .option {
+        background-color: #e9ecef;
+        margin-bottom: 0.2rem;
+        font-size: 2rem;
+        width: max-content;
+        cursor: pointer;
+      }
+    }
+
+    .apartments-con {
+      padding: 3rem 2rem;
+      padding-bottom: 0;
+      display: grid;
+      //  grid-template-columns: 1.5fr 1fr;
+      // height: 85vh;
+
+      .home-display-box {
+        padding: 2rem 1rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 1.5rem;
+        // overflow-y: scroll;
+        .property-container {
+          display: flex;
+          flex-direction: column;
+          border: 1px solid #e9ecef;
+          // box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+          height: max-content;
+          padding: 0.5rem;
+          &:hover {
+            transform: scale(1.05);
+            transition: all ease-in-out 0.5s;
+          }
+          img {
+            width: 100%;
+            height: 15rem;
+          }
+          .btn-tag {
+            margin-top: 1rem;
+            font-size: 2rem;
+            text-transform: capitalize;
+            color: #eb6440;
+          }
+          .address {
+            padding: 1rem 0;
+
+            font-size: 1.4rem;
+          }
+          .utilities-box {
+            display: flex;
+
+            .utilities {
+              display: flex;
+              align-items: center;
+              .utility-icon {
+                margin-right: 0.5rem;
+                font-size: 1.4rem;
+                fill: #005458;
+              }
+              span {
+                font-size: 1.6rem;
+              }
+              &:not(:last-child) {
+                margin-right: 2rem;
+              }
+            }
+          }
+          .purchase-box {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            // border-top: 1px solid #005458;
+            .amount {
+              font-size: 2rem;
+              font-family: "Montserrat", sans-serif;
+              color: #005458;
+            }
+            .btn-purchase {
+              padding: 0.5rem 1rem;
+              font-size: 1.6rem;
+              border: none;
+              background-color: #eb6440;
+              cursor: pointer;
+              color: #fff;
+              text-transform: uppercase;
+              border-radius: 1rem;
+              &:hover {
+                transform: translateY(-0.2rem);
+                box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  ///////Search box
+
+  ///////propeerty con
+}

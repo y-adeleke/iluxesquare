@@ -1,0 +1,40 @@
+.homepage-footer {
+  background-color: #000;
+  color: #fff;
+  padding-bottom: 7rem;
+}
+.homepage-footer .footer-icon {
+  padding-top: 5rem;
+}
+.homepage-footer .footer-con {
+  padding: 2rem 5rem;
+  padding-bottom: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+  align-items: center;
+}
+.homepage-footer .footer-con h1 {
+  font-size: 5rem;
+  font-family: "Montserrat Alternates", sans-serif;
+  color: #ff6380;
+}
+.homepage-footer .footer-con .social-con {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-self: end;
+}
+.homepage-footer .footer-con .social-con div {
+  padding: 3rem 5rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.homepage-footer .footer-con .social-con div .social-icon {
+  font-size: 4rem;
+  fill: #ff6380;
+}
+.homepage-footer .footer-con .social-con div span {
+  margin-left: 1rem;
+  font-size: 3rem;
+}/*# sourceMappingURL=Footer.css.map */

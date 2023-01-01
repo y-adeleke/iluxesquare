@@ -1,0 +1,27 @@
+.wrapper {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  display: flex;
+  border-radius: 2rem;
+  margin-top: -3rem;
+}
+.wrapper .img-wrap {
+  width: 20rem;
+  height: 15rem;
+  margin-top: -8rem;
+}
+.wrapper .img-wrap img {
+  border-radius: 3rem 0rem;
+  width: 20rem;
+  height: 15rem;
+}
+.wrapper .text-wrap {
+  padding: 1rem 0rem;
+}
+.wrapper .text-wrap h1 {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  text-transform: uppercase;
+}/*# sourceMappingURL=FeatureHelper.css.map */

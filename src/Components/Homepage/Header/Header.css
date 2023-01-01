@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat&family=Montserrat+Alternates:wght@400;800&family=Pacifico&family=Paytone+One&family=Playball&family=Playfair+Display+SC:ital@0;1&family=Raleway:wght@600&family=Syncopate:wght@700&display=swap");
+header {
+  margin-top: 0;
+  padding-top: 0rem;
+  color: #eff5f5;
+  z-index: 2000;
+  position: relative;
+  display: block;
+}
+header nav {
+  height: 7rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0px, 1fr));
+  align-items: center;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 1.8rem;
+  position: fixed;
+  z-index: 1000000;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  display: flex;
+  justify-content: space-between;
+}
+header nav .profile-box {
+  padding: 0 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header nav .profile-box .user {
+  fill: #000;
+  margin: 0 1rem;
+  font-size: 3rem;
+  cursor: pointer;
+}
+header nav .profile-box .user:hover, header nav .profile-box .user:active {
+  transform: scale(1.1);
+  transition: all ease-in 0.1s;
+}
+header nav .profile-box .greeting {
+  color: #000;
+  font-size: 1.8rem;
+}
+header nav .profile-box .greeting span {
+  color: #ff6380;
+  font-weight: 800;
+  font-size: 2rem;
+  text-transform: capitalize;
+}
+header nav .auth-box {
+  padding: 0 2rem;
+  margin-right: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+header nav .auth-box .properties-box {
+  margin-right: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ff6380;
+  border-radius: 3rem;
+  padding: 0.2rem 0.5rem;
+  padding-right: 1rem;
+  cursor: pointer;
+}
+header nav .auth-box .properties-box:hover, header nav .auth-box .properties-box:active, header nav .auth-box .properties-box:focus {
+  transform: scale(1.05);
+  transition: all ease-in 0.1s;
+}
+header nav .auth-box .properties-box .peroperties-toggle {
+  text-transform: capitalize;
+  border: none;
+  background: none;
+  color: #fff;
+  font-size: 1.6rem;
+  padding: 1rem 2rem;
+  cursor: pointer;
+}
+header nav .auth-box .properties-box .icon {
+  margin-left: -1rem;
+  fill: #e9ecef;
+  font-size: 1.8rem;
+  transform: rotate(90deg);
+}
+header nav .auth-box .btn-option {
+  background-color: #005458;
+  color: #fff;
+  position: absolute;
+  top: 5rem;
+  left: 2rem;
+  border: none;
+  font-size: 1.6rem;
+  border-radius: 3rem;
+  padding: 1.2rem 2rem;
+  cursor: pointer;
+}
+header nav .auth-box .green-color {
+  background-color: #005458;
+}
+header nav .auth-box .pink-color {
+  background-color: #ff6380;
+}
+header nav .auth-box .home-icon {
+  fill: #000;
+  font-size: 3rem;
+  cursor: pointer;
+}
+header nav .auth-box .home-icon:hover, header nav .auth-box .home-icon:active {
+  transform: scale(1.1);
+  transition: all ease-in 0.1s;
+}
+header nav .auth-box .home-icon:not(:last-child) {
+  margin-right: 1.5rem;
+  font-size: 3.5rem;
+}
+header nav .auth-box .shopping-cart-box {
+  display: flex;
+}
+header nav .auth-box .shopping-cart-box .shoppingcart-icon {
+  fill: #000;
+  font-size: 4rem;
+  cursor: pointer;
+}
+header nav .auth-box .shopping-cart-box .shoppingcart-icon:hover, header nav .auth-box .shopping-cart-box .shoppingcart-icon:active {
+  transform: scale(1.1);
+  transition: all ease-in 0.1s;
+}
+header nav .auth-box .shopping-cart-box .shoppingcart-icon:not(:first-child) {
+  margin-left: 1.5rem;
+  font-size: 3.5rem;
+}
+@-webkit-keyframes cartZoom {
+  0% {
+    transform: scale(1.5);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.5);
+  }
+}
+@keyframes cartZoom {
+  0% {
+    transform: scale(1.5);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.5);
+  }
+}
+header nav .auth-box .shopping-cart-box .cart-no-animate {
+  -webkit-animation: cartZoom 1s;
+          animation: cartZoom 1s;
+}
+header nav .auth-box .shopping-cart-box .cart-no {
+  margin-left: -0.8rem;
+  background-color: #005458;
+  border-radius: 3rem;
+  padding: 0.2rem 1rem 0.5rem;
+  height: 3rem;
+}
+header nav .auth-box .shopping-cart-box .cart-no span {
+  font-family: "Courier New", Courier, monospace;
+  transform: scale(1.2);
+  font-size: 1.5rem;
+  text-align: center;
+  color: #fff;
+}
+header nav .auth-box button {
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  background-color: #eb6440;
+  color: #fff;
+  height: 4rem;
+  padding: 1rem 2rem;
+  text-transform: capitalize;
+  cursor: pointer;
+  border-radius: 2rem;
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+header nav .auth-box button:not(:first-child) {
+  margin-left: 2rem;
+}
+header nav .auth-box button:hover, header nav .auth-box button:active {
+  transform: scale(1.1);
+  transition: all ease-in 0.1s;
+}
+header nav .comapany-info {
+  grid-column: span 1/span 1;
+}
+header nav .comapany-info .com-info-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header nav .comapany-info .com-info-box span {
+  background-color: #ff6380;
+  font-weight: 800;
+  padding: 1.5rem 3rem;
+  border-radius: 3rem;
+}
+header nav .comapany-info .com-info-box span .logo-icon {
+  color: #005458;
+  font-size: 2rem;
+}
+header nav .comapany-info .com-info-box span span {
+  padding-left: 0.5rem;
+}
+header nav .greeting-con {
+  grid-column: span 1/span 1;
+}
+header nav .greeting-con .greeting-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header nav .greeting-con .greeting-box span {
+  background-color: #fff;
+  color: #000;
+  padding: 1.5rem 3rem;
+  border-radius: 3rem;
+}
+header nav .greeting-con .greeting-box span .greeting > .name {
+  padding-left: 1rem;
+  color: #ff6380;
+  font-weight: 800;
+}
+header nav .profile-con {
+  grid-column: span 1/span 1;
+}
+header nav .profile-con .profile-box {
+  display: flex;
+  justify-content: center;
+}
+header nav .profile-con .profile-box span {
+  background-color: #005458;
+  padding: 1.5rem 3rem;
+  border-radius: 3rem;
+}
+header nav .profile-con .profile-box span .shopping-icon {
+  font-size: 2.7rem;
+  transform: scale(1.5);
+  color: #ff6380;
+  cursor: pointer;
+}
+header nav .profile-con .profile-box span .shopping-icon:hover {
+  transform: scale(1.7);
+  transition: all ease-in 0.1s;
+}
+header nav .profile-con .profile-box span .user {
+  margin-left: 3rem;
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+header nav .profile-con .profile-box span .user:hover {
+  transform: scale(1.5);
+  transition: all ease-in 0.1s;
+}
+header nav .profile-con .profile-box span .logout-icon {
+  margin-left: 3rem;
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: #eb6440;
+}
+header nav .profile-con .profile-box span .logout-icon:hover, header nav .profile-con .profile-box span .logout-icon:active, header nav .profile-con .profile-box span .logout-icon:focus {
+  transform: scale(1.5);
+  transition: all ease-in 0.1s;
+}/*# sourceMappingURL=Header.css.map */

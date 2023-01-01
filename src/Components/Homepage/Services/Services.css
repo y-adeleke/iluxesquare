@@ -1,0 +1,175 @@
+.section-services {
+  margin-top: 5rem;
+  background-color: #b3d8db;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  display: grid;
+  grid-template-columns: auto;
+}
+.section-services .services-text-con {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 3rem 5rem;
+  color: #000;
+}
+.section-services .services-text-con h1 {
+  font-size: 4rem;
+  word-spacing: 0.5rem;
+  width: 50%;
+  padding: 3rem;
+  font-family: "Montserrat Alternates", sans-serif;
+  justify-self: start;
+  color: #eb6440;
+  text-transform: capitalize;
+}
+.section-services .services-text-con p {
+  font-size: 2rem;
+  width: 50%;
+  padding: 3rem;
+  font-family: "Montserrat", sans-serif;
+}
+@-webkit-keyframes fadein {
+  0% {
+    display: none;
+  }
+  50% {
+    display: block;
+  }
+  100% {
+    display: none;
+  }
+}
+@keyframes fadein {
+  0% {
+    display: none;
+  }
+  50% {
+    display: block;
+  }
+  100% {
+    display: none;
+  }
+}
+.section-services .products-display-travel,
+.section-services .products-display-apartment,
+.section-services .products-display-food {
+  padding-top: 4rem;
+  margin-top: 3rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding-bottom: 5rem;
+  width: 80%;
+  justify-self: center;
+  margin-bottom: -10rem;
+  border-radius: 5rem;
+}
+.section-services .products-display-travel h1,
+.section-services .products-display-apartment h1,
+.section-services .products-display-food h1 {
+  padding: 3rem;
+  padding-top: 5rem;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 3rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+}
+.section-services .products-display-travel .img-con,
+.section-services .products-display-apartment .img-con,
+.section-services .products-display-food .img-con {
+  display: flex;
+  justify-content: center;
+  height: 50rem;
+}
+.section-services .products-display-travel .img-con img,
+.section-services .products-display-apartment .img-con img,
+.section-services .products-display-food .img-con img {
+  text-align: center;
+  transform: scale(0.8);
+}
+.section-services .products-display-travel {
+  background-color: #eb6440;
+}
+.section-services .products-display-apartment {
+  background-color: #005458;
+}
+.section-services .products-display-food {
+  background-color: #001253;
+}
+
+@-webkit-keyframes progressBar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes progressBar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+.progress-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  width: 100%;
+}
+
+.arrows-box {
+  display: flex;
+  justify-self: end;
+  margin-right: 5rem;
+}
+.arrows-box div {
+  padding: 1.5rem 1.7rem;
+  border-radius: 50%;
+  background-color: #fff;
+  text-align: center;
+  margin-right: 2rem;
+  cursor: pointer;
+}
+.arrows-box div .icon {
+  font-size: 5rem;
+  fill: #ff6380;
+}
+
+progress[value] {
+  /* Reset the default appearance */
+  -webkit-appearance: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  padding: 0 5rem;
+  width: 100%;
+  -webkit-animation-name: progressBar;
+          animation-name: progressBar;
+  -webkit-animation-duration: 2.1s;
+          animation-duration: 2.1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  height: 0.7rem;
+  color: #fff;
+}
+
+progress[value]::-webkit-progress-bar {
+  background-color: transparent;
+  border-radius: 3rem;
+}
+
+progress[value]::-moz-progress-bar {
+  background-color: transparent;
+  border-radius: 3rem;
+}
+
+progress[value]::-webkit-progress-value {
+  border-radius: 3rem;
+  background-color: #fff;
+}/*# sourceMappingURL=Services.css.map */

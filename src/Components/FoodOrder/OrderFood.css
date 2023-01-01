@@ -1,0 +1,468 @@
+.section-food {
+  margin-top: 0;
+  font-family: "Raleway", sans-serif;
+  background-color: rgba(255, 255, 255, 0.785);
+  padding-bottom: 2rem;
+  position: relative;
+}
+.section-food .title-box {
+  padding: 10rem 5rem 0;
+}
+.section-food .title-box h1 {
+  font-size: 5rem;
+  font-family: "Montserrat Alternates", sans-serif;
+  text-transform: capitalize;
+  text-align: center;
+}
+.section-food .title-box h1 .fresh-text {
+  color: #eb6440;
+}
+.section-food .title-box h1 .healthy-text {
+  color: #005458;
+}
+.section-food .title-box .searchbox {
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  padding: 0rem 1rem;
+}
+.section-food .title-box .searchbox .text-box {
+  height: 5rem;
+  width: 50%;
+}
+.section-food .title-box .searchbox .text-box p {
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  font-size: 3rem;
+}
+.section-food .title-box .searchbox .input-box {
+  width: 50%;
+}
+.section-food .title-box .searchbox .input-box input {
+  width: 70%;
+  height: 5rem;
+  border-radius: 2rem 0 0 2rem;
+  padding-left: 3rem;
+  font-size: 1.8rem;
+  border: 1px solid #000;
+}
+.section-food .title-box .searchbox .input-box input::-moz-placeholder {
+  padding-left: 3rem;
+  color: #000;
+}
+.section-food .title-box .searchbox .input-box input:-ms-input-placeholder {
+  padding-left: 3rem;
+  color: #000;
+}
+.section-food .title-box .searchbox .input-box input::placeholder {
+  padding-left: 3rem;
+  color: #000;
+}
+.section-food .title-box .searchbox .input-box input:focus, .section-food .title-box .searchbox .input-box input:active {
+  outline: none;
+}
+.section-food .title-box .searchbox .input-box button {
+  font-size: 1.8rem;
+  height: 5rem;
+  padding: 1rem 1.5rem;
+  align-self: center;
+  border-radius: 0 2rem 2rem 0;
+  text-transform: capitalize;
+  cursor: pointer;
+  border: 0px solid #000;
+  border-left: none;
+  color: #fff;
+  background-color: #000;
+}
+.section-food .title-box .searchbox .input-box button:hover {
+  background-color: #000;
+  transform: scale(1.1);
+}
+.section-food .products-box {
+  width: 100%;
+  padding: 3rem 3rem;
+  display: flex;
+  justify-content: center;
+}
+.section-food .products-box .products-con {
+  display: flex;
+  justify-content: center;
+  overflow-x: scroll;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+}
+.section-food .products-box .products-con::-webkit-scrollbar {
+  display: none;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;
+}
+.section-food .products-box .products-con .food-select {
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+.section-food .products-box .products-con .food-select .product-box {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  padding: 0.5rem 0.8rem;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.section-food .products-box .products-con .food-select .product-box span {
+  font-size: 3rem;
+}
+.section-food .products-box .products-con .food-select .product-box-active {
+  background-color: #fff;
+}
+.section-food .products-box .products-con .food-select p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  text-transform: capitalize;
+}
+.section-food .products-box .products-con .food-select-active {
+  background-color: #000;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 2rem;
+  color: #fff;
+}
+.section-food .products-box .move-right-box {
+  cursor: pointer;
+  align-self: center;
+  background-color: #005458;
+  border-radius: 3rem;
+  margin-left: 1rem;
+  padding: 0.7rem 0.8rem;
+}
+.section-food .products-box .move-right-box .move-right {
+  fill: #fff;
+  font-size: 3rem;
+}
+.section-food .food-display_box {
+  position: relative;
+  width: 90%;
+  margin-left: 5%;
+  padding: 3rem 8rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 5rem;
+}
+.section-food .food-display_box .invalid-search-error {
+  position: absolute;
+  top: 5rem;
+  left: 30%;
+  transform: translateY(-30%);
+  -ms-transform: translateY(-30%);
+  -webkit-transform: translateY(-30%);
+  font-size: 2rem;
+  font-family: "Montserrat Alternates", sans-serif;
+  text-transform: uppercase;
+  color: #eb6440;
+}
+.section-food .food-display_box .food-display {
+  background-color: #eb6440;
+  color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 3rem;
+  padding: 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.section-food .food-display_box .food-display img {
+  background-color: rgba(255, 255, 255, 0.782);
+  width: 100% !important;
+  border-radius: 2rem;
+  height: 15rem;
+}
+.section-food .food-display_box .food-display .food-name {
+  padding: 1.5rem;
+  padding-bottom: 0;
+  text-align: center;
+  font-size: 2rem;
+  font-family: "Montserrat Alternates", sans-serif;
+}
+.section-food .food-display_box .food-display .food-booking {
+  justify-self: flex-end;
+  align-self: flex-end;
+  padding: 1rem 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+}
+.section-food .food-display_box .food-display .food-booking .price-box {
+  display: flex;
+  flex-direction: column;
+}
+.section-food .food-display_box .food-display .food-booking .price-box p {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 1.4rem;
+  justify-self: center;
+  align-self: center;
+}
+.section-food .food-display_box .food-display .food-booking .price-box span {
+  font-size: 1.9rem;
+  justify-self: center;
+  align-self: center;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+}
+.section-food .food-display_box .food-display .food-booking .quantity-input {
+  color: #fff;
+}
+.section-food .food-display_box .food-display .food-booking .quantity-input .decrease {
+  font-size: 1.8rem;
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+.section-food .food-display_box .food-display .food-booking .quantity-input input {
+  background: #fff;
+  border: none;
+  outline: none;
+  color: #000;
+  font-size: 2.2rem;
+  text-align: center;
+  width: 3rem;
+  border-radius: 0.5rem;
+}
+.section-food .food-display_box .food-display .food-booking .quantity-input .increase {
+  font-size: 1.7rem;
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+.section-food .food-display_box .food-display .btn {
+  width: 100%;
+  cursor: pointer;
+  padding: 1.2rem 1.5rem;
+  background-color: #fff;
+  font-size: 1.7rem;
+  border: none;
+  border-radius: 1rem;
+  color: #000;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  font-family: "Montserrat Alternates", sans-serif;
+}
+.section-food .food-display_box .food-display .btn:hover, .section-food .food-display_box .food-display .btn:active .section-food .food-display_box .food-display .btn:focus {
+  transform: scale(1.05);
+  transition: all 0.2s ease-in-out;
+}
+.section-food .food-display_box .food-display .btn__selected {
+  background-color: #c3fae8;
+}
+.section-food .food-display_box .display-design {
+  background-color: #005458;
+}
+.section-food .search-more-box {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+.section-food .search-more-box .search-more {
+  border: 1px solid #000;
+  padding: 1.5rem 2rem;
+  color: #000;
+  background-color: transparent;
+  border-radius: 1rem;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.section-food .search-more-box .search-more:hover, .section-food .search-more-box .search-more:active, .section-food .search-more-box .search-more:focus {
+  background-color: #000;
+  color: #fff;
+}
+
+.blur-section {
+  filter: blur(3px) !important;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+@-webkit-keyframes cartDisplay {
+  0% {
+    position: absolute;
+    top: 1rem;
+    right: -10rem;
+  }
+  50% {
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+  }
+  100% {
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+  }
+}
+
+@keyframes cartDisplay {
+  0% {
+    position: absolute;
+    top: 1rem;
+    right: -10rem;
+  }
+  50% {
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+  }
+  100% {
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+  }
+}
+.cart-section {
+  padding: 3rem 5rem;
+  z-index: 100;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  background-color: #005458;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 3rem;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  max-height: 100vh !important;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  min-height: 20rem;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  -webkit-animation: cartDisplay 2s;
+          animation: cartDisplay 2s;
+}
+.cart-section h1 {
+  margin-top: 2rem;
+  font-size: 2rem;
+  font-family: "Syncopate", sans-serif;
+}
+.cart-section .no-cart-error {
+  margin-top: 2rem;
+  font-size: 2rem;
+  font-family: "Montserrat Alternates", sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgb(144, 255, 255);
+}
+.cart-section .food-cart-info {
+  margin-top: 3rem;
+  display: flex;
+  height: 8rem;
+  border: 1px solid rgb(227, 226, 226);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 1rem;
+}
+.cart-section .food-cart-info img {
+  background-color: #fff;
+  width: 30%;
+  margin-right: 1rem;
+  border-radius: 1rem 0 0 1rem;
+}
+.cart-section .food-cart-info .food-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.cart-section .food-cart-info .food-info .food-sort-name {
+  width: 100%;
+  font-size: 2rem;
+  justify-self: flex-start;
+  font-family: "Montserrat Alternates", sans-serif;
+  text-transform: capitalize;
+}
+.cart-section .food-cart-info .food-info .quantity-box {
+  width: 100%;
+  align-self: flex-end;
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 0.5rem;
+}
+.cart-section .food-cart-info .food-info .quantity-box .amount {
+  font-size: 1.8rem;
+}
+.cart-section .food-cart-info .food-info .quantity-box .quantity-input {
+  margin-left: 2rem;
+  align-items: center;
+  color: #fff;
+}
+.cart-section .food-cart-info .food-info .quantity-box .quantity-input .decrease {
+  font-size: 1.8rem;
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+.cart-section .food-cart-info .food-info .quantity-box .quantity-input input {
+  background: #fff;
+  border: none;
+  outline: none;
+  color: #000;
+  font-size: 2rem;
+  text-align: center;
+  width: 3rem;
+  border-radius: 0.5rem;
+}
+.cart-section .food-cart-info .food-info .quantity-box .quantity-input .increase {
+  font-size: 1.7rem;
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+.cart-section .food-cart-info .food-info .quantity-box button {
+  margin-left: 4rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  font-size: 1.6rem;
+  background-color: red;
+  color: #fff;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+.cart-section .food-cart-info .food-info .quantity-box button:hover, .cart-section .food-cart-info .food-info .quantity-box button:active .cart-section .food-cart-info .food-info .quantity-box button:focus {
+  transform: scale(1.1);
+  transition: all 0.1s ease-in-out;
+}
+.cart-section .total-amount-box {
+  margin-top: 2rem;
+  align-self: end;
+  display: flex;
+  flex-direction: column;
+}
+.cart-section .total-amount-box p {
+  font-size: 2rem;
+  text-transform: capitalize;
+  font-family: "Montserrat Alternates", sans-serif;
+}
+.cart-section .total-amount-box span {
+  margin-top: 1rem;
+  font-size: 1.8rem;
+  font-family: "Syncopate", sans-serif;
+}
+.cart-section .btns-con {
+  margin-top: 5rem;
+  align-self: end;
+}
+.cart-section .btns-con button {
+  padding: 1rem 3rem;
+  text-transform: capitalize;
+  border: none;
+  border-radius: 1.5rem;
+  font-size: 1.8rem;
+  font-family: "Montserrat Alternates", sans-serif;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  cursor: pointer;
+}
+.cart-section .btns-con button:hover, .cart-section .btns-con button:active .cart-section .btns-con button:focus {
+  transform: scale(1.1);
+  transition: all 0.1s ease-in-out;
+}
+.cart-section .btns-con .order-btn {
+  margin-left: 2rem;
+  background-color: #eb6440;
+  color: #fff;
+}/*# sourceMappingURL=OrderFood.css.map */
