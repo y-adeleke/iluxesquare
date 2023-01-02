@@ -10,14 +10,13 @@ header {
   nav {
     // margin-top: 1.5rem;
     height: 7rem;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0px, 1fr));
+    display: flex;
     align-items: center;
     font-family: "Montserrat Alternates", sans-serif;
     font-size: 1.8rem;
     position: fixed;
     z-index: 1000000;
-    width: 100%;
+    width: 100vw;
     // margin-left: 10%;
     background-color: #fff;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
@@ -36,6 +35,9 @@ header {
         margin: 0 1rem;
         font-size: 3rem;
         cursor: pointer;
+        @media screen and (max-width: 700px) {
+          display: none;
+        }
         &:hover,
         &:active {
           transform: scale(1.1);
@@ -45,6 +47,9 @@ header {
       .greeting {
         color: #000;
         font-size: 1.8rem;
+        @media screen and (max-width: 380px) {
+          font-size: 1.4rem;
+        }
         span {
           color: #ff6380;
           font-weight: 800;
@@ -188,7 +193,10 @@ header {
         border-radius: 2rem;
         font-size: 1.6rem;
         font-weight: 800;
-
+        @media screen and (max-width: 400px) {
+          width: max-content;
+          font-size: 1.2rem;
+        }
         &:not(:first-child) {
           margin-left: 2rem;
         }

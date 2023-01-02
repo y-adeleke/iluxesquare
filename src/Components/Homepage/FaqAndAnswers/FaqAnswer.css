@@ -5,6 +5,11 @@
   padding: 4rem;
   padding-top: 10rem;
 }
+@media screen and (max-width: 700px) {
+  .section-QA {
+    padding: 3rem 1rem;
+  }
+}
 .section-QA .QA-con {
   background-color: #005458;
   padding: 4rem;
@@ -12,6 +17,19 @@
   width: 80%;
   margin-left: 10%;
   border-radius: 3rem;
+}
+@media screen and (max-width: 1100px) {
+  .section-QA .QA-con {
+    width: 90%;
+    margin-left: 5%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .section-QA .QA-con {
+    width: 98%;
+    margin-left: 1%;
+    padding: 2rem 1rem;
+  }
 }
 .section-QA .QA-con h1 {
   font-size: 4rem;
@@ -26,6 +44,12 @@
   margin-top: 2.5rem;
   width: 70%;
   margin-left: 15%;
+}
+@media screen and (max-width: 700px) {
+  .section-QA .QA-con .qa-box {
+    width: 96%;
+    margin-left: 2%;
+  }
 }
 .section-QA .QA-con .qa-box .question-box {
   border-radius: 1rem 1rem 0 0;

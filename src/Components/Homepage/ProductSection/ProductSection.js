@@ -35,7 +35,7 @@ const ProductSection = () => {
         navigate("/authentication/sign-in", { replace: true });
         return;
       }
-      ctx.housePageActiveFunc("active");
+      ctx.foodPageActiveFunc("removeLogoutBtn");
       navigate("properties");
     },
   };
@@ -49,6 +49,7 @@ const ProductSection = () => {
         navigate("/authentication/sign-in", { replace: true });
         return;
       }
+      ctx.foodPageActiveFunc("removeLogoutBtn");
       navigate("bookflight");
     },
   };

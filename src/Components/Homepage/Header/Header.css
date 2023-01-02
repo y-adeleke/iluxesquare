@@ -9,14 +9,13 @@ header {
 }
 header nav {
   height: 7rem;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0px, 1fr));
+  display: flex;
   align-items: center;
   font-family: "Montserrat Alternates", sans-serif;
   font-size: 1.8rem;
   position: fixed;
   z-index: 1000000;
-  width: 100%;
+  width: 100vw;
   background-color: #fff;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   display: flex;
@@ -34,6 +33,11 @@ header nav .profile-box .user {
   font-size: 3rem;
   cursor: pointer;
 }
+@media screen and (max-width: 700px) {
+  header nav .profile-box .user {
+    display: none;
+  }
+}
 header nav .profile-box .user:hover, header nav .profile-box .user:active {
   transform: scale(1.1);
   transition: all ease-in 0.1s;
@@ -41,6 +45,11 @@ header nav .profile-box .user:hover, header nav .profile-box .user:active {
 header nav .profile-box .greeting {
   color: #000;
   font-size: 1.8rem;
+}
+@media screen and (max-width: 380px) {
+  header nav .profile-box .greeting {
+    font-size: 1.4rem;
+  }
 }
 header nav .profile-box .greeting span {
   color: #ff6380;
@@ -185,6 +194,14 @@ header nav .auth-box button {
   border-radius: 2rem;
   font-size: 1.6rem;
   font-weight: 800;
+}
+@media screen and (max-width: 400px) {
+  header nav .auth-box button {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    font-size: 1.2rem;
+  }
 }
 header nav .auth-box button:not(:first-child) {
   margin-left: 2rem;

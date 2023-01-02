@@ -49,8 +49,8 @@ const FlightSearchForm = () => {
 
   return (
     <section className="flight-section">
+      <Header />
       <div className="content-section">
-        <Header />
         <div className="content-box">
           <h1>Ready to take off?</h1>
           <p>depart from anywhere. arrive to anyplace.</p>

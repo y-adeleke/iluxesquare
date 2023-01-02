@@ -13,6 +13,11 @@
   display: block;
   overflow: hidden;
 }
+@media screen and (max-width: 850px) {
+  .title-page {
+    height: 70vh;
+  }
+}
 .title-page .title-section {
   margin-top: 10rem;
   display: grid;
@@ -20,7 +25,13 @@
   grid-template-rows: 1fr 2fr;
   align-items: center;
   justify-items: center;
-  height: 80%;
+  height: 80vh;
+}
+@media screen and (max-width: 700px) {
+  .title-page .title-section {
+    margin-left: 4rem;
+    justify-items: start;
+  }
 }
 .title-page .title-section .title-text {
   margin-top: 7rem;
@@ -34,6 +45,16 @@
   display: flex;
   flex-direction: column;
 }
+@media screen and (max-width: 700px) {
+  .title-page .title-section .title-text .word-text {
+    font-size: 4rem;
+  }
+}
+@media screen and (max-width: 350px) {
+  .title-page .title-section .title-text .word-text {
+    font-size: 2rem;
+  }
+}
 .title-page .title-section .title-text .word-text .one-text {
   color: #eb6440;
   text-align: start;
@@ -43,6 +64,11 @@
   color: #005458;
   font-family: "Paytone One", sans-serif;
   text-align: start;
+}
+@media screen and (max-width: 700px) {
+  .title-page .title-section .title-text .word-text .all-text {
+    font-size: 2rem;
+  }
 }
 @-webkit-keyframes subTextAnim {
   0% {
@@ -80,6 +106,11 @@
   justify-content: center;
   align-items: center;
 }
+@media screen and (max-width: 400px) {
+  .title-page .title-section .title-text .button-con {
+    display: none;
+  }
+}
 .title-page .title-section .title-text .button-con .appstore-btn,
 .title-page .title-section .title-text .button-con .playstore-btn {
   margin-top: 2rem;
@@ -88,6 +119,12 @@
   border: none;
   font-size: 1.8rem;
   cursor: pointer;
+}
+@media screen and (max-width: 700px) {
+  .title-page .title-section .title-text .button-con .appstore-btn,
+.title-page .title-section .title-text .button-con .playstore-btn {
+    font-size: 1.2rem;
+  }
 }
 .title-page .title-section .title-text .button-con .appstore-btn .download-icon,
 .title-page .title-section .title-text .button-con .playstore-btn .download-icon {

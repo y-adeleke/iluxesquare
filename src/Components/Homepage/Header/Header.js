@@ -27,12 +27,12 @@ const Header = (prop) => {
   }
 
   const logoutHandler = () => {
+    authCtx.foodPageActiveFunc("notActive");
     authCtx.logout();
     navigate("/home", { replace: true });
   };
   const homeButtonHandler = () => {
-    authCtx.foodPageActiveFunc("notActive");
-    authCtx.housePageActiveFunc("notActive");
+    authCtx.foodPageActiveFunc(false);
     navigate("/home", { replace: true });
   };
 
@@ -71,36 +71,6 @@ const Header = (prop) => {
         </span>
       </div>
       <div className="auth-box">
-        {authCtx.housePageActive === "active" && (
-          <div
-            className={`properties-box ${!buyHouseactive && "green-color"}`}
-            onClick={() => setOptionActive(!optionActive)}
-          >
-            {buyHouseactive ? (
-              <button className="peroperties-toggle">buy home</button>
-            ) : (
-              <button className="peroperties-toggle">Sell house</button>
-            )}
-            <MdArrowForwardIos className="icon" />
-          </div>
-        )}
-        {optionActive && buyHouseactive && (
-          <button
-            className="btn-option"
-            onClick={() => setBuyHouseActive(false)}
-          >
-            Sell house
-          </button>
-        )}
-        {optionActive && !buyHouseactive && (
-          <button
-            className="btn-option pink-color"
-            onClick={() => setBuyHouseActive(true)}
-          >
-            Buy home
-          </button>
-        )}
-
         <AiFillHome className="home-icon" onClick={homeButtonHandler} />
         {authCtx.foodPageActive === "active" && (
           <div className="shopping-cart-box">
@@ -113,9 +83,12 @@ const Header = (prop) => {
             </div>
           </div>
         )}
-        <button className="logout-btn" onClick={logoutHandler}>
-          Log Out
-        </button>
+        {authCtx.foodPageActive !== "active" &&
+          authCtx.foodPageActive !== "removeLogoutBtn" && (
+            <button className="logout-btn" onClick={logoutHandler}>
+              Log Out
+            </button>
+          )}
       </div>
     </nav>
   );

@@ -10,10 +10,8 @@ const AuthContext = React.createContext({
   foodSearchResult: "",
   foodName: "",
   foodPageActive: false,
-  housePageActive: false,
   errorOccured: "",
   orderFunc: () => {},
-  housePageActiveFunc: (isActive) => {},
   foodPageActiveFunc: (isactive) => {},
   foodSearchFunc: (foodname) => {},
   foodCart: (cartData) => {},
@@ -52,7 +50,6 @@ export const AuthContextProvider = (props) => {
   const [foodInputName, setFoodName] = useState("spaghetti");
   const [cartOrder, setCartOrder] = useState(initialCart);
   const [foodPageActive, setFoodPageActive] = useState(initialFoodPage);
-  const [housePageActive, setHousePageActive] = useState(initialFoodPage);
 
   const userIsLoggedIn = !!token;
 
@@ -123,9 +120,6 @@ export const AuthContextProvider = (props) => {
     setFoodPageActive(isActive);
     localStorage.setItem("foodPageActive", JSON.stringify(isActive));
   };
-  const housePageActiveHandler = (isActive) => {
-    setHousePageActive(isActive);
-  };
 
   const contextValue = {
     token: token,
@@ -139,9 +133,7 @@ export const AuthContextProvider = (props) => {
     foodName: foodInputName,
     foodSearchFunc: foodSearchHandler,
     foodPageActive: foodPageActive,
-    housePageActive: housePageActive,
     orderFunc: orderHandler,
-    housePageActiveFunc: housePageActiveHandler,
     foodPageActiveFunc: foodPageActiveHandler,
     foodCart: foodCartHandler,
     removeItem: removeItemHandler,

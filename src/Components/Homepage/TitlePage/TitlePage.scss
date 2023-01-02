@@ -14,6 +14,9 @@
   position: relative;
   display: block;
   overflow: hidden;
+  @media screen and (max-width: 850px) {
+    height: 70vh;
+  }
 
   .title-section {
     margin-top: 10rem;
@@ -22,7 +25,11 @@
     grid-template-rows: 1fr 2fr;
     align-items: center;
     justify-items: center;
-    height: 80%;
+    height: 80vh;
+    @media screen and (max-width: 700px) {
+      margin-left: 4rem;
+      justify-items: start;
+    }
 
     .title-text {
       margin-top: 7rem;
@@ -34,6 +41,12 @@
         font-family: "Raleway", sans-serif;
         display: flex;
         flex-direction: column;
+        @media screen and (max-width: 700px) {
+          font-size: 4rem;
+        }
+        @media screen and (max-width: 350px) {
+          font-size: 2rem;
+        }
         .one-text {
           color: #eb6440;
           text-align: start;
@@ -43,6 +56,9 @@
           color: #005458;
           font-family: "Paytone One", sans-serif;
           text-align: start;
+          @media screen and (max-width: 700px) {
+            font-size: 2rem;
+          }
         }
       }
 
@@ -72,6 +88,9 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        @media screen and (max-width: 400px) {
+          display: none;
+        }
 
         .appstore-btn,
         .playstore-btn {
@@ -82,6 +101,9 @@
           font-size: 1.8rem;
           cursor: pointer;
           // box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          @media screen and (max-width: 700px) {
+            font-size: 1.2rem;
+          }
           .download-icon {
             font-size: 2rem;
             margin-right: 0.5rem;

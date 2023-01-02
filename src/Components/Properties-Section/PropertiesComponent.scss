@@ -9,7 +9,9 @@
     align-items: center;
     height: 80vh;
     background-color: #e9ecef;
-
+    @media screen and (max-width: 420px) {
+      height: 60vh;
+    }
     @keyframes textAnimation {
       0% {
         background-image: linear-gradient(to right, #fff, #005458, #eb6440);
@@ -37,6 +39,16 @@
       background-clip: text;
       -webkit-background-clip: text;
       color: transparent;
+      @media screen and (max-width: 850px) {
+        transform: scale(1);
+        font-size: 6rem;
+      }
+      @media screen and (max-width: 480px) {
+        font-size: 4rem;
+      }
+      @media screen and (max-width: 350px) {
+        font-size: 2rem;
+      }
     }
     .sub-title {
       margin-top: 5rem;
@@ -49,12 +61,19 @@
       font-size: 1.4rem;
       text-transform: uppercase;
       color: #005458;
+      @media screen and (max-width: 610px) {
+        font-size: 1rem;
+      }
+      @media screen and (max-width: 400px) {
+        font-size: 0.8rem;
+      }
+      @media screen and (max-width: 350px) {
+        font-size: 0.7rem;
+      }
     }
   }
 
   .apartmets-box {
-    //height: 100vh;
-    // background-color: yellow;
     font-family: "Montserrat Alternates", sans-serif;
     .search-box {
       background-color: #fff;
@@ -64,6 +83,7 @@
       justify-content: space-around;
       border-bottom: 1px solid #cfd1d2;
       position: relative;
+
       .search-icon {
         font-size: 2rem;
       }
@@ -75,9 +95,21 @@
         font-family: "Montserrat Alternates", sans-serif;
         outline: none;
         text-transform: capitalize;
+        @media screen and (max-width: 430px) {
+          font-size: 1.6rem;
+        }
+        @media screen and (max-width: 350px) {
+          font-size: 1.3rem;
+        }
         &::placeholder {
           text-transform: capitalize;
           font-size: 2rem;
+          @media screen and (max-width: 430px) {
+            font-size: 1.6rem;
+          }
+          @media screen and (max-width: 350px) {
+            font-size: 1.3rem;
+          }
           font-family: "Montserrat Alternates", sans-serif;
         }
       }
@@ -90,6 +122,9 @@
         border-radius: 1rem;
         color: #fff;
         cursor: pointer;
+        @media screen and (max-width: 430px) {
+          font-size: 1.4rem;
+        }
         &:active,
         &:focus,
         &:hover {
@@ -125,6 +160,24 @@
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-gap: 1.5rem;
         // overflow-y: scroll;
+        @media screen and (max-width: 850px) {
+          grid-template-columns: 1fr 1fr 1fr;
+        }
+        @media screen and (max-width: 610px) {
+          grid-template-columns: 1fr 1fr;
+          grid-gap: 3rem;
+        }
+        @media screen and (max-width: 430px) {
+          grid-gap: 1rem;
+          padding-left: 0;
+        }
+        @media screen and (max-width: 400px) {
+          grid-template-columns: 1fr;
+          padding: 2rem 6rem;
+        }
+        @media screen and (max-width: 360px) {
+          padding: 2rem 2rem;
+        }
         .property-container {
           display: flex;
           flex-direction: column;

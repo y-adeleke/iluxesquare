@@ -1,11 +1,16 @@
 .form-auth {
   padding: 7rem 5rem;
   background: #fff;
-  height: 100vh;
+  min-height: 100vh;
   color: #000;
   font-family: "Montserrat", sans-serif;
   z-index: 5000;
   position: relative;
+  @media screen and (max-width: 550px) {
+    padding: 7rem 0.3rem;
+    min-height: 100vh;
+  }
+
   .go-back-icon {
     background-color: #005458;
     font-size: 4.5rem;

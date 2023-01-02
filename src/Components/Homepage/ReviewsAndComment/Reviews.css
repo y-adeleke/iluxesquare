@@ -10,9 +10,42 @@
   grid-template-columns: 1fr 1fr;
   grid-gap: 3rem;
 }
+@media screen and (max-width: 1100px) {
+  .reviews-section {
+    width: 90%;
+    margin-left: 5%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .reviews-section {
+    width: 98%;
+    margin-left: 1%;
+    padding: 2rem 1rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    height: 80vh;
+    overflow-y: scroll;
+  }
+}
+@media screen and (max-width: 400px) {
+  .reviews-section {
+    height: 120vh;
+  }
+}
+@media screen and (max-width: 380px) {
+  .reviews-section {
+    height: 150vh;
+  }
+}
 .reviews-section .reviews-box {
   padding: 2rem 3rem;
   overflow-y: scroll;
+}
+@media screen and (max-width: 700px) {
+  .reviews-section .reviews-box {
+    grid-row: 2/3;
+    padding-bottom: 0;
+  }
 }
 .reviews-section .reviews-box h1 {
   font-size: 3rem;
@@ -96,6 +129,11 @@
 .reviews-section .add-review-box {
   padding: 2rem 3rem;
 }
+@media screen and (max-width: 700px) {
+  .reviews-section .add-review-box {
+    grid-row: 1/2;
+  }
+}
 .reviews-section .add-review-box h1 {
   font-size: 2.8rem;
   font-family: "Montserrat Alternates", sans-serif;
@@ -109,7 +147,7 @@
   padding: 2rem 3rem;
   background-color: #fff;
   border-radius: 3rem;
-  height: 20rem;
+  min-height: 20rem;
   width: 100%;
   resize: none;
   border: 3px solid #000;

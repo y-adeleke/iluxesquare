@@ -21,7 +21,6 @@ const PropertiesPage = () => {
   useEffect(() => {
     const fetchCity = async () => {
       setIsLoading(true);
-      setHousesData([]);
       try {
         const res = await fetch(
           `https://zillow56.p.rapidapi.com/search?location=${"washington"}`,
@@ -80,7 +79,7 @@ const PropertiesPage = () => {
         <div className="apartments-con">
           <div className="home-display-box">
             {isLoading && <LoadSpinner />}
-            {!housesData ? (
+            {!housesData && !isLoading ? (
               <p>Properties doesnt exist in this city</p>
             ) : (
               <PropertyDetails data={housesData} />

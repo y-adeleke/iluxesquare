@@ -14,15 +14,36 @@
   grid-gap: 1rem;
   align-items: center;
 }
+@media screen and (max-width: 700px) {
+  .homepage-footer .footer-con {
+    padding: 2rem 1rem;
+    grid-template-columns: 1fr;
+  }
+}
 .homepage-footer .footer-con h1 {
   font-size: 5rem;
   font-family: "Montserrat Alternates", sans-serif;
   color: #ff6380;
 }
+@media screen and (max-width: 700px) {
+  .homepage-footer .footer-con h1 {
+    font-size: 3rem;
+  }
+}
 .homepage-footer .footer-con .social-con {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 1fr 1fr;
   justify-self: end;
+}
+@media screen and (max-width: 700px) {
+  .homepage-footer .footer-con .social-con {
+    justify-self: start;
+  }
+}
+@media screen and (max-width: 350px) {
+  .homepage-footer .footer-con .social-con {
+    grid-template-columns: 1fr;
+  }
 }
 .homepage-footer .footer-con .social-con div {
   padding: 3rem 5rem;
@@ -30,9 +51,20 @@
   align-items: center;
   cursor: pointer;
 }
+@media screen and (max-width: 700px) {
+  .homepage-footer .footer-con .social-con div {
+    justify-content: space-evenly;
+    padding: 3rem 2rem;
+  }
+}
 .homepage-footer .footer-con .social-con div .social-icon {
   font-size: 4rem;
   fill: #ff6380;
+}
+@media screen and (max-width: 700px) {
+  .homepage-footer .footer-con .social-con div .social-icon {
+    font-size: 3rem;
+  }
 }
 .homepage-footer .footer-con .social-con div span {
   margin-left: 1rem;
