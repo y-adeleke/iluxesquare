@@ -178,6 +178,15 @@
         @media screen and (max-width: 360px) {
           padding: 2rem 2rem;
         }
+        .exhausted {
+          display: flex;
+          justify-content: center;
+          width: 100vw;
+          p {
+            font-size: 2rem;
+            color: #005458;
+          }
+        }
         .property-container {
           display: flex;
           flex-direction: column;
@@ -254,7 +263,4 @@
       }
     }
   }
-  ///////Search box
-
-  ///////propeerty con
 }

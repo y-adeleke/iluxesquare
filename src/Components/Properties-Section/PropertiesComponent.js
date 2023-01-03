@@ -80,7 +80,11 @@ const PropertiesPage = () => {
           <div className="home-display-box">
             {isLoading && <LoadSpinner />}
             {!housesData && !isLoading ? (
-              <p>Properties doesnt exist in this city</p>
+              <div className="exhausted">
+                <p>
+                  Unable to get properties data at this time (API exhausted)
+                </p>
+              </div>
             ) : (
               <PropertyDetails data={housesData} />
             )}
