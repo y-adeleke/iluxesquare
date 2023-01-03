@@ -66,7 +66,7 @@ const AddReview = () => {
     if (success) {
       setTimeout(() => {
         setSucess(false);
-      }, 3000);
+      }, 2000);
     }
   }, [success]);
 

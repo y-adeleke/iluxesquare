@@ -28,7 +28,7 @@ const ProductSection = () => {
   const shortletcontent = {
     title: "Live in a home of your choice",
     infoContent:
-      "with diffrent price range, enjoy a good apartments of your choice in a well equiped environment, good roads, non-interrupted power supply, fire services, secuirty and wide range of payment methods. ",
+      "with diffrent price range, enjoy a good apartments of your choice in a well equiped environment, good roads, non-interrupted power supply, fire services, secuirty with wide range of payment methods and payment options. ",
     btnText: "Buy an apartment →",
     onClick: () => {
       if (!ctx.isLoggedIn) {
