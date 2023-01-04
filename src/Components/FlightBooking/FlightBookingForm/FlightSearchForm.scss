@@ -77,6 +77,10 @@
       width: 90%;
       margin-left: 5%;
     }
+    @media screen and (max-width: 1300px) {
+      width: 94%;
+      margin-left: 3%;
+    }
     @media screen and (max-width: 850px) {
       width: 98%;
       margin-left: 1%;
@@ -92,6 +96,7 @@
     @media screen and (max-width: 460px) {
       width: 98%;
       margin-left: 1%;
+      margin-bottom: 0;
     }
     .flight-option-btn {
       width: max-content;
@@ -255,6 +260,8 @@
           &:not(:first-child) {
             border-left: none;
             @media screen and (max-width: 400px) {
+            }
+            @media screen and (max-width: 380px) {
               border: 2px solid #dee2e6;
               border-top: none;
             }

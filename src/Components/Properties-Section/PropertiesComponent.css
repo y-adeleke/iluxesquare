@@ -87,12 +87,17 @@
   text-transform: uppercase;
   color: #005458;
 }
+.properties-page .title-box .sub-title * {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
 @media screen and (max-width: 610px) {
   .properties-page .title-box .sub-title {
     font-size: 1rem;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 420px) {
   .properties-page .title-box .sub-title {
     font-size: 0.8rem;
   }
@@ -248,7 +253,6 @@
 .properties-page .apartmets-box .apartments-con .home-display-box .exhausted {
   display: flex;
   justify-content: center;
-  width: 100vw;
 }
 .properties-page .apartmets-box .apartments-con .home-display-box .exhausted p {
   font-size: 2rem;

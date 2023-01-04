@@ -77,6 +77,7 @@ const FlightSearchForm = () => {
               </div>
               <div className="input-con">
                 <p>Departure</p>
+                <input type="text" placeholder=" select city" />
               </div>
             </div>
 

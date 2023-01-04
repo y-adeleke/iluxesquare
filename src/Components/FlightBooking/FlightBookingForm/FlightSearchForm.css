@@ -101,6 +101,12 @@
     margin-left: 5%;
   }
 }
+@media screen and (max-width: 1300px) {
+  .flight-section .bookflight-form {
+    width: 94%;
+    margin-left: 3%;
+  }
+}
 @media screen and (max-width: 850px) {
   .flight-section .bookflight-form {
     width: 98%;
@@ -123,6 +129,7 @@
   .flight-section .bookflight-form {
     width: 98%;
     margin-left: 1%;
+    margin-bottom: 0;
   }
 }
 .flight-section .bookflight-form .flight-option-btn {
@@ -323,7 +330,7 @@
 .flight-section .bookflight-form .flight-input__information .flight-date__box .depature-arrival__date:not(:first-child) {
   border-left: none;
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 380px) {
   .flight-section .bookflight-form .flight-input__information .flight-date__box .depature-arrival__date:not(:first-child) {
     border: 2px solid #dee2e6;
     border-top: none;
