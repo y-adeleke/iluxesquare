@@ -419,11 +419,17 @@
   -webkit-animation: cartDisplay 2s;
           animation: cartDisplay 2s;
 }
-@media screen and (max-width: 330px) {
+@media screen and (max-width: 450px) {
   .cart-section {
     right: 0;
+    width: 100%;
     -webkit-animation: cartDisplay 0.5s;
             animation: cartDisplay 0.5s;
+  }
+}
+@media screen and (max-width: 330px) {
+  .cart-section {
+    padding: 3rem;
   }
 }
 .cart-section h1 {
@@ -431,7 +437,7 @@
   font-size: 2rem;
   font-family: "Syncopate", sans-serif;
 }
-@media screen and (max-width: 330px) {
+@media screen and (max-width: 450px) {
   .cart-section h1 {
     font-size: 1.6rem;
   }

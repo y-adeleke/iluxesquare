@@ -190,7 +190,7 @@ const OrderFood = () => {
             })
           )}
 
-          {!auth.foodCartData.length === 0 && (
+          {!auth.foodCartData.length < 1 && (
             <div className="total-amount-box">
               <p>total order</p>
               <span>
