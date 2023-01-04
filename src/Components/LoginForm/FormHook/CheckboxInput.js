@@ -11,7 +11,6 @@ const CheckboxInput = (prop) => {
     checkedBox,
     checkboxCheck,
     checkboxValidation,
-    reset,
     valueIsValid,
   } = useCheckbox(isChecked);
 
@@ -20,7 +19,7 @@ const CheckboxInput = (prop) => {
       checkboxValidation,
       valueIsValid,
     });
-  }, [checkedBox]);
+  }, [checkedBox, checkboxValidation, prop, valueIsValid]);
 
   return (
     <Fragment>

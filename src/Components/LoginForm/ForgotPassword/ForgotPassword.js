@@ -27,7 +27,6 @@ const ForgotPassword = ({ location }) => {
         }
       );
       if (!respose.ok) throw new Error("This user does not exist");
-      const emailData = await respose.json();
       setEmail(data);
       setLoadSpinner(false);
       setDisplaySentSuccesss(true);

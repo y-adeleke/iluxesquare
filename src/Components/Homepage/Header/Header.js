@@ -1,16 +1,13 @@
 import { AiOutlineUser } from "react-icons/ai";
 import { AiFillHome } from "react-icons/ai";
 import { AiOutlineShoppingCart } from "react-icons/ai";
-import { MdArrowForwardIos } from "react-icons/md";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import AuthContext from "../../store/auth-context";
 import { useNavigate } from "react-router-dom";
 
 import "./Header.css";
 
 const Header = (prop) => {
-  const [buyHouseactive, setBuyHouseActive] = useState(true);
-  const [optionActive, setOptionActive] = useState(false);
   const authCtx = useContext(AuthContext);
   const navigate = useNavigate();
   const userSignedIn = authCtx.isLoggedIn;

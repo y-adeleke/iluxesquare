@@ -7,7 +7,11 @@ const QuantityInput = (prop) => {
 
   useEffect(() => {
     prop.value(qtyValue);
-  }, [qtyValue]);
+  }, [qtyValue, prop]);
+
+  useEffect(() => {
+    if (prop.orderCompleted === true) setQtyValue(1);
+  }, [prop.orderCompleted]);
 
   return (
     <div className="quantity-input">

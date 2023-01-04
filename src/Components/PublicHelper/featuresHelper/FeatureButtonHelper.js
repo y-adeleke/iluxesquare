@@ -4,11 +4,7 @@ import "./FeatureButtonHelper.css";
 const FeatureButtonHelper = (prop) => {
   return (
     <Fragment>
-      <button
-        onClick={prop.onClick}
-        className={`button  ${prop.className}`}
-        role="button"
-      >
+      <button onClick={prop.onClick} className={`button  ${prop.className}`}>
         {prop.buttonText}
       </button>
     </Fragment>

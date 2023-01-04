@@ -36,6 +36,8 @@ const PropertiesPage = () => {
     };
 
     fetchCity();
+    ////The next line code is to avoid warning
+    // eslint-disable-next-line
   }, []);
 
   const searchHousesHandler = async () => {

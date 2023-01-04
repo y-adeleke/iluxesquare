@@ -8,7 +8,6 @@ import AuthContext from "../store/auth-context";
 import { useEffect } from "react";
 import LoadSpinner from "../PublicHelper/Spinner";
 import QuantityInput from "./QuantityInput";
-import { el } from "date-fns/locale";
 
 const OrderFood = () => {
   const auth = useContext(AuthContext);
@@ -19,7 +18,11 @@ const OrderFood = () => {
 
   useEffect(() => {
     auth.foodSearchFunc(auth.foodName);
+
+    ///The next line commented code is to ignore the warning "React Hook useEffect has a missing dependency"
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
   const data = auth.foodSearchResult;
 
   const searchInputFoodHandler = () => {
@@ -95,21 +98,26 @@ const OrderFood = () => {
                   <div
                     key={menu.id}
                     className={`food-display ${
-                      +key % 2 == 1 && "display-design"
+                      +key % 2 === 1 && "display-design"
                     }`}
                   >
-                    <img src={menu.image} alt="food-image" />
+                    <img src={menu.image} alt="food-pic" />
                     <span className="food-name">{menu.title}</span>
                     <div className="food-booking">
                       <div className="price-box">
                         <p>Price</p>
                         <span>${amount}</span>
                       </div>
-                      <QuantityInput
-                        value={(val) => {
-                          qty = val;
-                        }}
-                      />
+                      {exist.length === 0 ? (
+                        <QuantityInput
+                          value={(val) => {
+                            qty = val;
+                          }}
+                          orderCompleted={ordered}
+                        />
+                      ) : (
+                        ""
+                      )}
                     </div>
                     {exist.length === 0 ? (
                       <button
@@ -131,7 +139,7 @@ const OrderFood = () => {
                     )}
                   </div>
                 );
-              }
+              } else return null;
             })
           )}
         </div>
@@ -161,7 +169,7 @@ const OrderFood = () => {
               totalAmount.push(menu.amount * menu.quantity);
               return (
                 <div className="food-cart-info" key={key}>
-                  <img src={menu.image} alt="food-image" />
+                  <img src={menu.image} alt="food-pic" />
                   <div className="food-info">
                     <span className="food-sort-name">{menu.title}</span>
                     <div className="quantity-box">
@@ -182,7 +190,7 @@ const OrderFood = () => {
             })
           )}
 
-          {!auth.foodCartData.length == 0 && (
+          {!auth.foodCartData.length === 0 && (
             <div className="total-amount-box">
               <p>total order</p>
               <span>
@@ -200,7 +208,8 @@ const OrderFood = () => {
             >
               Close
             </button>
-            {!auth.foodCartData.length == 0 && (
+
+            {!auth.foodCartData.length < 1 && (
               <button className="order-btn" onClick={orderBtnHandler}>
                 order
               </button>

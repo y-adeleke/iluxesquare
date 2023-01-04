@@ -38,7 +38,7 @@ const PasswordInput = (prop) => {
       valueIsValid,
       passwordReset,
     });
-  }, [inputPass]);
+  }, [inputPass, passwordReset, passwordValidation, prop, valueIsValid]);
 
   return (
     <Fragment>

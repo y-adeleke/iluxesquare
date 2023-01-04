@@ -25,7 +25,7 @@ export const EmailInput = (props) => {
       valueIsValid,
       emailReset,
     });
-  }, [inputEmail]);
+  }, [inputEmail, emailReset, emailValidation, props, valueIsValid]);
 
   return (
     <Fragment>
@@ -66,7 +66,7 @@ export const TextInput = (props) => {
       valueIsValid,
       textReset,
     });
-  }, [inputText]);
+  }, [inputText, props, textReset, textValidation, valueIsValid]);
 
   return (
     <Fragment>

@@ -452,7 +452,7 @@
 .flight-section .bookflight-form .flight-form__submit-btn {
   text-align: end;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 .flight-section .bookflight-form .flight-form__submit-btn button {
   padding: 1.5rem 2rem;

@@ -27,7 +27,7 @@ const TitlePage = (prop) => {
       const newIndex = isLastSlide ? 0 : currentIndex + 1;
       setCurrentIndex(newIndex);
     }, 2000);
-  }, [currentIndex]);
+  }, [currentIndex, subText.length]);
   return (
     <Fragment>
       <Header name={prop.name} />

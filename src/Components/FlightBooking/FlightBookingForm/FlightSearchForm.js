@@ -9,12 +9,6 @@ import { BsFillPeopleFill } from "react-icons/bs";
 import { AiOutlineUp } from "react-icons/ai";
 import { AiOutlineDown } from "react-icons/ai";
 import { BsArrowRight } from "react-icons/bs";
-import PlacesAutocomplete from "react-places-autocomplete";
-import {
-  geocodeByAddress,
-  geocodeByPlaceId,
-  getLatLng,
-} from "react-places-autocomplete";
 
 import "react-datepicker/dist/react-datepicker.css";
 import "./FlightSearchForm.css";
@@ -26,7 +20,6 @@ const FlightSearchForm = () => {
   );
   const [selectedReturnDate, setSelectedReturnDate] = useState(new Date());
   const [peopleValue, setPeopleValue] = useState(1);
-  const [address, setAddress] = useState("");
   const [featureAvailable, setFeatureAvailble] = useState(false);
 
   const decrementHandler = () => {
@@ -40,11 +33,6 @@ const FlightSearchForm = () => {
 
   const flightBookingFormHandler = (e) => {
     e.preventDefault();
-  };
-
-  const addressSelectHandler = async (value) => {
-    setAddress(value);
-    const result = geocodeByAddress(value);
   };
 
   return (
@@ -89,40 +77,6 @@ const FlightSearchForm = () => {
               </div>
               <div className="input-con">
                 <p>Departure</p>
-                <PlacesAutocomplete
-                  className="auto-complete"
-                  value={address}
-                  onChange={setAddress}
-                  onSelect={addressSelectHandler}
-                >
-                  {({
-                    getInputProps,
-                    suggestions,
-                    getSuggestionItemProps,
-                    loading,
-                  }) => {
-                    return (
-                      <input
-                        {...getInputProps({
-                          placeholder: "select city",
-                          type: "text",
-                        })}
-                      />
-                    );
-                    {
-                      loading && <div>loading...</div>;
-                    }
-                    {
-                      suggestions.map((suggestion) => {
-                        return (
-                          <div {...getSuggestionItemProps(suggestion)}>
-                            {suggestion.description}
-                          </div>
-                        );
-                      });
-                    }
-                  }}
-                </PlacesAutocomplete>
               </div>
             </div>
 

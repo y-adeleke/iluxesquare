@@ -1,6 +1,6 @@
 import SignUp from "./SignUp/SignUp";
 import SignIn from "./SignIn/SignIn";
-import FormImage from "../../pictures/loginform.png";
+
 import "./LoginForm.css";
 import { useState } from "react";
 import ErrorExist from "../PublicHelper/EroorExist";
@@ -101,7 +101,7 @@ const LoginForm = (props) => {
         }
       );
       const dataProfile = await res.json();
-      // console.log(dataProfile);
+      console.log(dataProfile);
 
       const userInfo = {
         email: userData.email,

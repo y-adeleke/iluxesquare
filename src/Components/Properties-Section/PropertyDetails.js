@@ -1,4 +1,4 @@
-import { Fragment, useState } from "react";
+import { Fragment } from "react";
 import { FaBed } from "react-icons/fa";
 import { FaBath } from "react-icons/fa";
 
@@ -30,7 +30,7 @@ const PropertyDetails = (props) => {
 
         return (
           <div key={key} className="property-container">
-            <img src={data.imgSrc} alt="property-image" />
+            <img src={data.imgSrc} alt="property-pic" />
             <p className="btn-tag">For Sale</p>
             <p className="address">
               {`${data.streetAddress}, ${data.city}, ${data.state}, ${data.country}, ${data.zipcode}.`}

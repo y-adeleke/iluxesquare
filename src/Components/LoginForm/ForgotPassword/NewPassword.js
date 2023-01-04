@@ -1,5 +1,4 @@
 import "../formCss/formHelper.css";
-import FormImage from "../../../pictures/loginform.png";
 import PasswordInput from "../FormHook/PasswordInput";
 import ErrorExist from "../../PublicHelper/EroorExist";
 import LoadSpinner from "../../PublicHelper/Spinner";

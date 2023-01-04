@@ -50,7 +50,7 @@ const Slider = () => {
       const newIndex = isLastSlide ? 0 : currentIndex + 1;
       setCurrentIndex(newIndex);
     }, 2000);
-  }, [currentIndex]);
+  }, [currentIndex, slides.length]);
 
   return <Fragment>{slide}</Fragment>;
 };

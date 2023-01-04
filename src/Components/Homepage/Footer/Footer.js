@@ -20,7 +20,7 @@ const Footer = () => {
       const newIndex = isLastSlide ? 0 : currentIndex + 1;
       setCurrentIndex(newIndex);
     }, 2000);
-  }, [currentIndex]);
+  }, [currentIndex, slides.length]);
 
   const footerIcon = (
     <div className="progress-box ">
