@@ -195,7 +195,7 @@ header nav .auth-box button {
   font-size: 1.6rem;
   font-weight: 800;
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 420px) {
   header nav .auth-box button {
     width: -webkit-max-content;
     width: -moz-max-content;
