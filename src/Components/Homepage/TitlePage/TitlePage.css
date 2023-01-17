@@ -106,7 +106,7 @@
   justify-content: center;
   align-items: center;
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 420px) {
   .title-page .title-section .title-text .button-con {
     display: none;
   }
