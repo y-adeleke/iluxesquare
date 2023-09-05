@@ -1,9 +1,0 @@
-@import "../../../PublicHelper/Variables-Mixings";
-
-.button {
-  @include buttonStyle();
-  width: max-content;
-  margin-top: 1rem;
-  font-family: "Syncopate", sans-serif;
-  background-color: 005458
-}
