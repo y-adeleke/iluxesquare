@@ -18,7 +18,7 @@
     height: 70vh;
   }
 }
-.title-page .title-section {
+.title-section {
   margin-top: 10rem;
   display: grid;
   grid-template-columns: 1fr;
@@ -33,10 +33,10 @@
     justify-items: start;
   }
 }
-.title-page .title-section .title-text {
+.title-text {
   margin-top: 7rem;
 }
-.title-page .title-section .title-text .word-text {
+.word-text {
   text-align: center;
   width: 100%;
   text-transform: uppercase;
@@ -46,27 +46,27 @@
   flex-direction: column;
 }
 @media screen and (max-width: 700px) {
-  .title-page .title-section .title-text .word-text {
+  .word-text {
     font-size: 4rem;
   }
 }
 @media screen and (max-width: 350px) {
-  .title-page .title-section .title-text .word-text {
+  .word-text {
     font-size: 2rem;
   }
 }
-.title-page .title-section .title-text .word-text .one-text {
+.one-text {
   color: #eb6440;
   text-align: start;
 }
-.title-page .title-section .title-text .word-text .all-text {
+.all-text {
   font-size: 4rem;
   color: #005458;
   font-family: "Paytone One", sans-serif;
   text-align: start;
 }
 @media screen and (max-width: 700px) {
-  .title-page .title-section .title-text .word-text .all-text {
+  .all-text {
     font-size: 2rem;
   }
 }
@@ -93,64 +93,18 @@
   text-transform: capitalize;
   text-align: center;
   -webkit-animation-name: subTextAnim;
-          animation-name: subTextAnim;
+  animation-name: subTextAnim;
   -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+  animation-duration: 2s;
   -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
   color: #000;
 }
-.title-page .title-section .title-text .button-con {
-  margin-top: 3rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.button-con {
+  display: none;
 }
-@media screen and (max-width: 420px) {
-  .title-page .title-section .title-text .button-con {
-    display: none;
-  }
-}
-.title-page .title-section .title-text .button-con .appstore-btn,
-.title-page .title-section .title-text .button-con .playstore-btn {
-  margin-top: 2rem;
-  font-family: "Montserrat Alternates", sans-serif;
-  color: #fff;
-  border: none;
-  font-size: 1.8rem;
-  cursor: pointer;
-}
-@media screen and (max-width: 700px) {
-  .title-page .title-section .title-text .button-con .appstore-btn,
-.title-page .title-section .title-text .button-con .playstore-btn {
-    font-size: 1.2rem;
-  }
-}
-.title-page .title-section .title-text .button-con .appstore-btn .download-icon,
-.title-page .title-section .title-text .button-con .playstore-btn .download-icon {
-  font-size: 2rem;
-  margin-right: 0.5rem;
-}
-.title-page .title-section .title-text .button-con .appstore-btn:hover, .title-page .title-section .title-text .button-con .appstore-btn:active,
-.title-page .title-section .title-text .button-con .playstore-btn:hover,
-.title-page .title-section .title-text .button-con .playstore-btn:active {
-  transform: scale(1.1);
-  transition: all ease-in 0.1s;
-}
-.title-page .title-section .title-text .button-con .appstore-btn {
-  padding: 2rem 3rem 2rem 2rem;
-  margin-right: -1.5rem;
-  background-color: #eb6440;
-  border-radius: 2rem;
-}
-.title-page .title-section .title-text .button-con .playstore-btn {
-  margin-left: 3rem;
-  padding: 2rem 2rem 2rem 3rem;
-  border-radius: 0 2rem 2rem 0;
-  border-radius: 2rem;
-  background-color: #005458;
-}
+
 .title-page .title-section .illus-con img {
   margin-top: 5rem;
   transform: scale(0.8);
-}/*# sourceMappingURL=TitlePage.css.map */
+} /*# sourceMappingURL=TitlePage.css.map */

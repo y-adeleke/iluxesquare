@@ -16,6 +16,7 @@ const OrderFood = () => {
   const [openCart, setOpenCart] = useState(false);
   const [ordered, setOrdered] = useState(false);
 
+  // Using the useEffect hook to trigger a food search when the component mounts.
   useEffect(() => {
     auth.foodSearchFunc(auth.foodName);
 
@@ -42,8 +43,7 @@ const OrderFood = () => {
         <Header openCartHandler={() => setOpenCart(true)} />
         <div className="title-box">
           <h1>
-            Eat <span className="fresh-text">fresh</span> &
-            <span className="healthy-text"> healthy</span>
+            Eat <span className="fresh-text">fresh</span> &<span className="healthy-text"> healthy</span>
           </h1>
           <div className="searchbox">
             <div className="text-box">
@@ -53,12 +53,7 @@ const OrderFood = () => {
             </div>
 
             <div className="input-box">
-              <input
-                type="text"
-                placeholder="Search Food"
-                value={value}
-                onChange={(e) => setValue(e.target.value)}
-              />
+              <input type="text" placeholder="Search Food" value={value} onChange={(e) => setValue(e.target.value)} />
               <button onClick={searchInputFoodHandler}>search</button>
             </div>
           </div>
@@ -74,33 +69,18 @@ const OrderFood = () => {
         </div>
 
         <div className="food-display_box">
-          {auth.errorOccured && (
-            <p className="invalid-search-error">
-              Unable to fetch, Please check your Internet and try again.
-            </p>
-          )}
-          {data.length === 0 && !auth.isLoading && !auth.errorOccured && (
-            <p className="invalid-search-error">
-              Invalid food, Please search again.
-            </p>
-          )}
+          {auth.errorOccured && <p className="invalid-search-error">Unable to fetch, Please check your Internet and try again.</p>}
+          {data.length === 0 && !auth.isLoading && !auth.errorOccured && <p className="invalid-search-error">Invalid food, Please search again.</p>}
           {!data || auth.isLoading ? (
             <LoadSpinner />
           ) : (
             data.map((menu, key) => {
               if (key + 1 <= displayMore) {
                 const amount = `${String(menu.id).slice(0, 2)}.00`;
-                const exist = auth.foodCartData.filter(
-                  (data) => data.id === menu.id
-                );
+                const exist = auth.foodCartData.filter((data) => data.id === menu.id);
                 let qty = 1;
                 return (
-                  <div
-                    key={menu.id}
-                    className={`food-display ${
-                      +key % 2 === 1 && "display-design"
-                    }`}
-                  >
+                  <div key={menu.id} className={`food-display ${+key % 2 === 1 && "display-design"}`}>
                     <img src={menu.image} alt="food-pic" />
                     <span className="food-name">{menu.title}</span>
                     <div className="food-booking">
@@ -130,8 +110,7 @@ const OrderFood = () => {
                             amount: amount,
                             quantity: qty,
                           });
-                        }}
-                      >
+                        }}>
                         Add to cart
                       </button>
                     ) : (
@@ -145,10 +124,7 @@ const OrderFood = () => {
         </div>
         <div className="search-more-box">
           {!auth.isLoading && data.length > displayMore && (
-            <button
-              className="search-more"
-              onClick={() => setDisplayMoreBtn(displayMore + 8)}
-            >
+            <button className="search-more" onClick={() => setDisplayMoreBtn(displayMore + 8)}>
               Search more
             </button>
           )}
@@ -158,11 +134,8 @@ const OrderFood = () => {
       {openCart && (
         <div className={`cart-section ${!openCart && "close-cart-section"}`}>
           {!ordered && <h1>Place your order now</h1>}
-          {ordered && (
-            <p className="no-cart-error">sit back and await your order!</p>
-          )}
-          {!auth.foodCartData ||
-          (auth.foodCartData.length === 0 && !ordered) ? (
+          {ordered && <p className="no-cart-error">sit back and await your order!</p>}
+          {!auth.foodCartData || (auth.foodCartData.length === 0 && !ordered) ? (
             <p className="no-cart-error">please, add an Item!</p>
           ) : (
             auth.foodCartData.map((menu, key) => {
@@ -179,8 +152,7 @@ const OrderFood = () => {
                       <button
                         onClick={() => {
                           auth.removeItem(menu);
-                        }}
-                      >
+                        }}>
                         Remove
                       </button>
                     </div>
@@ -193,9 +165,7 @@ const OrderFood = () => {
           {!auth.foodCartData.length < 1 && (
             <div className="total-amount-box">
               <p>total order</p>
-              <span>
-                ${totalAmount.reduce((acc, current) => acc + current)}.00
-              </span>
+              <span>${totalAmount.reduce((acc, current) => acc + current)}.00</span>
             </div>
           )}
           <div className="btns-con">
@@ -204,8 +174,7 @@ const OrderFood = () => {
               onClick={() => {
                 setOrdered(false);
                 setOpenCart(false);
-              }}
-            >
+              }}>
               Close
             </button>
 

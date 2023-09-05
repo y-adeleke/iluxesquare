@@ -69,9 +69,9 @@
     display: none;
   }
 }
-.section-services .products-display-travel,
-.section-services .products-display-apartment,
-.section-services .products-display-food {
+.products-display-travel,
+.products-display-apartment,
+.products-display-food {
   padding-top: 4rem;
   margin-top: 3rem;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -82,16 +82,16 @@
   border-radius: 5rem;
 }
 @media screen and (max-width: 1100px) {
-  .section-services .products-display-travel,
-.section-services .products-display-apartment,
-.section-services .products-display-food {
+  .products-display-travel,
+  .products-display-apartment,
+  .products-display-food {
     width: 90%;
   }
 }
 @media screen and (max-width: 700px) {
-  .section-services .products-display-travel,
-.section-services .products-display-apartment,
-.section-services .products-display-food {
+  .products-display-travel,
+  .products-display-apartment,
+  .products-display-food {
     max-width: 98%;
   }
 }
@@ -121,18 +121,18 @@
 }
 @media screen and (max-width: 700px) {
   .section-services .products-display-travel .img-con img,
-.section-services .products-display-apartment .img-con img,
-.section-services .products-display-food .img-con img {
+  .section-services .products-display-apartment .img-con img,
+  .section-services .products-display-food .img-con img {
     transform: scale(0.5);
   }
 }
-.section-services .products-display-travel {
+.products-display-travel {
   background-color: #eb6440;
 }
-.section-services .products-display-apartment {
+.products-display-apartment {
   background-color: #005458;
 }
-.section-services .products-display-food {
+.products-display-food {
   background-color: #001253;
 }
 
@@ -188,11 +188,11 @@ progress[value] {
   padding: 0 5rem;
   width: 100%;
   -webkit-animation-name: progressBar;
-          animation-name: progressBar;
+  animation-name: progressBar;
   -webkit-animation-duration: 2.1s;
-          animation-duration: 2.1s;
+  animation-duration: 2.1s;
   -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
   height: 0.7rem;
   color: #fff;
 }
@@ -210,4 +210,4 @@ progress[value]::-moz-progress-bar {
 progress[value]::-webkit-progress-value {
   border-radius: 3rem;
   background-color: #fff;
-}/*# sourceMappingURL=Services.css.map */
+} /*# sourceMappingURL=Services.css.map */

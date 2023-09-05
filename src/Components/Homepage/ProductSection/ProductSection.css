@@ -62,7 +62,8 @@
   padding: 2rem 3rem;
   cursor: pointer;
 }
-.product-display .product-text-box .product-action-btn:hover, .product-display .product-text-box .product-action-btn:active {
+.product-display .product-text-box .product-action-btn:hover,
+.product-display .product-text-box .product-action-btn:active {
   transform: translateY(-0.7rem);
   transition: all ease-in 0.1s;
-}/*# sourceMappingURL=ProductSection.css.map */
+} /*# sourceMappingURL=ProductSection.css.map */
